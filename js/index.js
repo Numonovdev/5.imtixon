@@ -9,17 +9,6 @@ const qidirish = document.getElementById('chiqarish')
 shop.addEventListener('click', function(){
      window.location.assign('http://127.0.0.1:5500/html/cart.html')
 })
-async function todo(url) {
-     try {
-       const result = await fetch(url);
-       if (result.status === 200) {
-         return await result.json();
-       }
-     } catch (eror) {
-       console.error(eror);
-       return [];
-     }
-}
 function createCard(data){
       return `
           <div class="card" data-id="${data.id}">
@@ -84,6 +73,17 @@ function createCard1(data){
      `
 }
 
+async function todo(url) {
+     try {
+       const result = await fetch(url);
+       if (result.status === 200) {
+         return await result.json();
+       }
+     } catch (eror) {
+       console.error(eror);
+       return [];
+     }
+}
 function oneTovar() {
      let cards = document.querySelectorAll('.card');
      cards.length && cards.forEach(function(card){
@@ -93,10 +93,10 @@ function oneTovar() {
      })
   })
 }
-function Prisefilt() {
+async function Prisefilt() {
      let dan1 = dan.value;
      let gacha1 = gacha.value;
-     const datas = todo(
+     const datas = await todo(
        `https://cars-pagination.onrender.com/products/filter?minPrice=${dan1}&maxPrice=${gacha1}`
      );
      wrapper.innerHTML = datas.map(createCard).join("");
@@ -104,9 +104,9 @@ function Prisefilt() {
      dan.value = "";
      gacha.value = "";
 }
-function catigoriya(category='') {
+async function catigoriya(category = "") {
      let urlcategoria = category? `https://cars-pagination.onrender.com/products/category?category=${category}`: 'https://cars-pagination.onrender.com/products';
-     const data = todo(urlcategoria);
+     const data = await todo(urlcategoria);
    
      if (data.length) {
        const kesibolish = data.slice(0, 15);
@@ -116,7 +116,7 @@ function catigoriya(category='') {
    }
 document.addEventListener("DOMContentLoaded", function () {
      catigoriya();
-     
+   
      if (rightfilter) {
           rightfilter.addEventListener("change", function () {
          catigoriya(this.value);
@@ -126,7 +126,36 @@ document.addEventListener("DOMContentLoaded", function () {
      if (qidirish) {
        qidirish.addEventListener("click", Prisefilt);
      }
-   });   
+   });
+   
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+     fetch("https://cars-pagination.onrender.com/products/")
+          .then(res => {
+               if(res.status == 200){
+                    return res.json()
+               }
+          })
+          .then(data => {
+               if(data.length){
+                    data.forEach(function(product){
+                         let card = createCard(product);
+                         wrapper.innerHTML += card;
+                    })
+               }
+               let jim = cards.slice(1,5);
+               console.log(jim);
+          })
+
+          .catch(err => {
+               console.log(err);
+          });
+
+
+});
 
 document.addEventListener('DOMContentLoaded', function() {
      fetch("https://cars-pagination.onrender.com/products/")
