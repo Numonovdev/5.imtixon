@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>tovar</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+     <header class="header">
+          <div class="top">
+               <div class="container top_container">
+                    <p>Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09</p>
+                    <a href="#">Обратный звонок</a>
+               </div>
+          </div>
+          <div class="container header_container">
+               <div class="logo-and-ul">
+                    <img src="img/Logo.svg" alt="logo">
+                    <ul>
+                         <li><a href="#">Главная</a></li>
+                         <select id="select">
+                              <option value="katalog">Каталог</option>
+                         </select>
+                         <li><a href="#">Оптовая продажа</a></li>
+                         <li><a href="#">О нас</a></li>
+                    </ul>
+               </div>
+               <div class="call-and-shop">
+                    <i id="call" class="fa-solid fa-phone"></i>
+                    <p id="number">+7 (966) 55 88 499</p>
+                    <i id="heart" class="fa-regular fa-heart"></i>
+                    <i id="shop" class="fa-solid fa-cart-shopping"></i>
+               </div>
+          </div>
+     </header>
+     <div class="glavnaya-and-katalog">
+          <div class="gk-container container">
+               <a href="#">Главная</a>
+               <span>/</span>
+               <a href="#">Каталог</a>
+          </div>
+     </div>
+     <div class="h1 container">
+          <h1>Накладные электронные замки</h1> <span>(100)</span>
+     </div>
+     <div class="main">
+          <div class="container main_container" >
+               <div class="main-left">
+                    <button class="main-left-btn">Сбросить фильтры</button>
+                    <div class="right-top">
+                         <p>Электронные кодовые замки  <span><img src="img/Cross.svg" alt="" ></span></p>
+                         <select name="" id="rightfilter">
+                              <option value="не популярен">не популярен</option>
+                              <option value="средний">средний</option>
+                              <option value="известный">известный</option>
+                         </select>
+                    </div>
+                   
+               </div>
+               <div class="main-right">
+                    <div class="main-left-filter">
+                         <h1>Фильтр</h1>
+
+                         <div class="left-filter-div">
+                              <p>Цена  <span><img src="img/Frame.svg" alt=""></span></p>
+                              <div class="left-filter-input">
+                                   <input type="number" name="" id="danprise" placeholder="79 000 |" style="text-align: center;">
+                                   <input type="number" name="" id="gachaprise" placeholder="24 500 ₱" style="text-align: center;">
+                              </div>
+                              <div class="qidiriw"><button id="chiqarish">Izlash</button></div>
+                              <p>Особенности <span><img src="img/Frame (1).svg" alt=""></span></p>
+                              <p>Цвет <span><img src="img/Frame (1).svg" alt=""></span></p>
+                              <p>Материал <span><img src="img/Frame (1).svg" alt=""></span></p>
+                              <p>Размеры <span><img src="img/Frame (1).svg" alt=""></span></p>
+                         </div>
+                    </div>
+                    <div class="right-tovars">
+                         <div class="right-tovar" id="wrapper">
+                             
+
+                         </div>
+                         <div class="right-next">
+                              <span><</span>
+                              <span>1</span>
+                              <span>2</span>
+                              <span>3</span>
+                              <span>4</span>
+                              <span>5</span>
+                              <span>6</span>
+                              <span>7</span>
+                              <span>...</span>
+                              <span>15</span>
+                              <span>></span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="vi-nedavno">
+          <div class="container vine_container">
+               <h1>Вы недавно просмотрели</h1>
+               <div class="h2"><span><img src="img/Frame (4).svg" alt=""></span><img src="img/Frame (5).svg" alt=""></div>
+          </div>
+          <div class="container vine-tovar_container" id="card2">
+               
+          </div>
+     </div>
+     <!-- Eget quis quam metus, scelerisque. -->
+     <div class="eget-quis">
+          <div class="container eq_container">
+               <div class="eq-top">
+                    <div class="eq-top-text">
+                         <h1>Eget quis quam metus, scelerisque.</h1>
+                         <p>Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam rhoncus.</p>
+                         <div class="eq-check-text">
+                              <div class="check-text-position">
+                                   <span>
+                                        <input type="checkbox" name="" id="">
+                                        <h6>Межкомнатую дверь</h6>
+                                   </span>
+                                   <span>
+                                        <input type="checkbox" name="" id="">
+                                        <h6>Деревянную дверь</h6>
+                                   </span>
+                              </div>
+                              <div class="check-text-position">
+
+                                   <span>
+                                        <input type="checkbox" name="" id="">
+                                        <h6>Межкомнатую дверь</h6>
+                                   </span>
+                                   <span>
+                                        <input type="checkbox" name="" id="">
+                                        <h6>Деревянную дверь</h6>
+                                   </span>
+                              </div>
+
+                         </div>
+                         <p>Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra interdum in leo. Nullam ullamcorper id enim fermentum integer praesent bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac dictumst mauris sed facilisis.</p>
+                    </div>
+                    <div class="eq-top-img">
+                         <img src="img/tovars img/white-2-storey-house-near-trees-1115804.png" alt="">
+                    </div>
+               </div>
+               <div class="eq-top">
+                    <div class="eq-top-img">
+                         <img src="img/tovars img/white-2-storey-house-near-trees-1115804 (1).png" alt="">
+                    </div>
+                    <div class="eq-top-text">
+                         <h1>Eget quis quam metus, scelerisque.</h1>
+                         <p>Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam rhoncus.</p>
+                         <p>Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra interdum in leo. Nullam ullamcorper id enim fermentum integer praesent bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac dictumst mauris sed facilisis.</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+<!-- Мы Вам перезвоним -->
+     <div class="callme">
+          <div class="container callme_container">
+               <h1>Мы Вам перезвоним</h1>
+               <p>Если у вас возникли какие-то вопросы или проблемы, заполните форму и мы Вам перезвоним.</p>
+               <div class="callme-input">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="email" name="" id="" placeholder="Ваш Email">
+                    <button class="btn">Отправить</button>
+               </div>
+          </div>
+     </div>
+<!-- footer -->
+
+     <footer class="footer">
+          <div class="container footer_container">
+               <div class="message">
+                    <img src="img/Logo (1).svg" width="105px" height="88px" alt="">
+                    <div class="icons">
+                         <img src="img/Frame (6).svg" alt="">
+                         <img src="img/Frame (7).svg" alt="">
+                         <img src="img/free-icon-facebook-2111392 1.svg" alt="">
+                    </div>
+               </div>
+               <div class="footer-info">
+                    <div class="block">
+                         <h1>Навигация</h1>
+                         <span>
+                              <a href="#">Главная</a>
+                              <a href="#">Каталог</a>
+                              <a href="#">Оптовая продажа</a>
+                              <a href="#">О нас</a>
+                         </span>
+                    </div>
+                    <div class="block">
+                         <h1>Наши контакты</h1>
+                         <span>
+                              <p>Телефоны</p>
+                              <a href="#">+7 (988) 565 00 38</a>
+                              <a href="#">+375 33 662 82 56</a>
+                              <p>Email</p>
+                              <a href="#">vladpertcev@mail.ru</a>
+                              <a href="#">korobko416@gmail.com</a>
+                         </span>
+                    </div>
+                    <div class="block">
+                         <h1>Наш адрес</h1>
+                         <span>
+                              <a href="#">Россия, <br> Ростов-на-Дону ул. <br> Богачева, 16    </a>
+                         </span>
+                    </div>
+                    <div class="block">
+                         <h1>Информация</h1>
+                         <span>
+                              <a href="#">Доставка и оплата</a>
+                              <a href="#">Гарантии</a>
+                              <a href="#">Возврат товара</a>
+                         </span>
+                    </div>
+               </div>
+          </div>
+          <div class="container age">
+               <p>© 2021 Golden Soft All rights reserved.</p>
+          </div>
+     </footer>
+
+
+     <script src="./js/index.js"></script>
+</body>
+</html>
